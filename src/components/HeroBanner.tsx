@@ -216,17 +216,17 @@ export default function HeroBanner({
       style={heroStyle}
       className="relative w-full bg-[var(--bg)] lg:h-[var(--heroH)]"
     >
-      <div className="container-editorial py-8 lg:py-12 lg:h-full">
+      <div className="container-editorial py-6 sm:py-8 lg:py-12 lg:h-full">
         {/* Main Grid */}
         <div
-          className="grid gap-8 lg:h-full lg:min-h-0 lg:grid-cols-12 lg:items-stretch"
+          className="grid gap-6 lg:gap-8 lg:h-full lg:min-h-0 lg:grid-cols-12 lg:items-stretch"
           onMouseEnter={() => (hoverRef.current = true)}
           onMouseLeave={() => (hoverRef.current = false)}
         >
           {/* LEFT - Image Section */}
           <div className="lg:col-span-7 lg:flex lg:h-full lg:min-h-0 lg:flex-col">
             <div className="relative overflow-hidden rounded-lg bg-[var(--surface-2)] lg:flex-1 lg:min-h-0">
-              <div className="relative h-[400px] md:h-[480px] lg:h-full">
+              <div className="relative h-[300px] sm:h-[360px] md:h-[480px] lg:h-full">
                 {/* Previous layer for transition */}
                 {previous && motionPref !== "reduce" && prevImg && (
                   <NextImage
@@ -259,7 +259,7 @@ export default function HeroBanner({
 
                 {/* Destination badge */}
                 {destinationId && (
-                  <div className="absolute left-4 top-4">
+                  <div className="absolute left-3 top-3 sm:left-4 sm:top-4">
                     <span className="inline-block rounded-sm bg-white/90 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-[var(--text-1)] backdrop-blur-sm">
                       {String(destinationId)}
                     </span>
@@ -271,7 +271,7 @@ export default function HeroBanner({
                   <>
                     <button
                       onClick={prevFn}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[var(--text-1)] backdrop-blur-sm transition-all duration-200 hover:bg-white"
+                      className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/90 text-[var(--text-1)] backdrop-blur-sm transition-all duration-200 hover:bg-white"
                       aria-label="Previous"
                     >
                       <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -280,7 +280,7 @@ export default function HeroBanner({
                     </button>
                     <button
                       onClick={next}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[var(--text-1)] backdrop-blur-sm transition-all duration-200 hover:bg-white"
+                      className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/90 text-[var(--text-1)] backdrop-blur-sm transition-all duration-200 hover:bg-white"
                       aria-label="Next"
                     >
                       <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -305,8 +305,8 @@ export default function HeroBanner({
 
             {/* Slide indicators */}
             {len > 1 && (
-              <div className="mt-4 flex items-center justify-between">
-                <div className="flex items-center gap-2">
+              <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+                <div className="flex flex-wrap items-center gap-2">
                   {activities.slice(0, 5).map((a, i) => (
                     <button
                       key={(a as Activity).id ?? `${(a as Activity).name}-${i}`}
@@ -339,8 +339,8 @@ export default function HeroBanner({
           <div className="lg:col-span-5 lg:h-full lg:min-h-0">
             <div className="flex h-full min-h-0 flex-col">
               {/* Header */}
-              <div className="mb-6">
-                <p className="text-xs font-medium uppercase tracking-wider text-[var(--text-3)] mb-2">
+              <div className="mb-4 sm:mb-6">
+                <p className="mb-2 text-xs font-medium uppercase tracking-wider text-[var(--text-3)]">
                   Featured Experience
                 </p>
                 <span className="text-xs text-[var(--text-3)]">
@@ -349,20 +349,20 @@ export default function HeroBanner({
               </div>
 
               {/* Title */}
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[var(--text-1)] mb-4 truncate">
+              <h1 className="mb-4 font-serif text-3xl md:text-4xl lg:text-5xl leading-tight text-[var(--text-1)] line-clamp-2 sm:line-clamp-3">
                 {title}
               </h1>
 
               {/* Summary */}
               {summary && (
-                <p className="text-base text-[var(--text-2)] leading-relaxed mb-6 max-w-md line-clamp-2">
+                <p className="mb-6 max-w-md text-base leading-relaxed text-[var(--text-2)] line-clamp-3 sm:line-clamp-2">
                   {summary}
                 </p>
               )}
 
               {/* Highlights */}
               {bullets.length > 0 && (
-                <ul className="space-y-3 mb-8">
+                <ul className="mb-8 space-y-3">
                   {bullets.map((b, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[var(--primary)] flex-shrink-0" />
@@ -373,8 +373,8 @@ export default function HeroBanner({
               )}
 
               {/* Price & CTA */}
-              <div className="mt-auto pt-6 border-t border-[var(--border)]">
-                <div className="flex items-baseline gap-2 mb-6">
+              <div className="mt-auto border-t border-[var(--border)] pt-4 sm:pt-6">
+                <div className="mb-4 flex items-baseline gap-2 sm:mb-6">
                   <span className="text-xs uppercase tracking-wider text-[var(--text-3)]">{priceSub}</span>
                   <span className="font-serif text-2xl text-[var(--text-1)]">{priceLabel}</span>
                 </div>
@@ -382,13 +382,13 @@ export default function HeroBanner({
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     href={`/activity/${current.id}`}
-                    className="btn btn-primary text-center"
+                    className="btn btn-primary w-full sm:w-auto text-center"
                   >
                     View Experience
                   </Link>
                   <Link
                     href="/destinations"
-                    className="btn btn-secondary text-center"
+                    className="btn btn-secondary w-full sm:w-auto text-center"
                   >
                     Browse All
                   </Link>
