@@ -63,7 +63,7 @@ export default function Header() {
               href="/" 
               className="font-serif text-xl font-medium text-[var(--text-1)] hover:text-[var(--primary)] transition-colors duration-150"
             >
-              YourBrand
+              Travelogix
             </Link>
 
             {/* Desktop Navigation */}

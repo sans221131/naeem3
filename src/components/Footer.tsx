@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="md:col-span-4">
             <Link href="/" className="inline-block mb-6">
               <span className="font-serif text-xl text-[var(--text-1)]">
-                YourBrand
+                Travelogix
               </span>
             </Link>
             <p className="text-sm text-[var(--text-2)] leading-relaxed max-w-xs mb-8">
@@ -123,10 +123,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="mailto:hello@yourbrand.com" 
+                  href="mailto:hello@travelogix.com" 
                   className="text-sm text-[var(--text-2)] hover:text-[var(--text-1)] transition-colors duration-200"
                 >
-                  hello@yourbrand.com
+                  hello@travelogix.com
                 </a>
               </li>
               <li>
@@ -149,7 +149,7 @@ export default function Footer() {
         <div className="border-t border-[var(--border)] mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-[var(--text-3)]">
-              © {currentYear} YourBrand. All rights reserved.
+              © {currentYear} Travelogix. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link 
