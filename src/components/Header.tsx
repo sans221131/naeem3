@@ -61,9 +61,9 @@ export default function Header() {
             {/* Logo */}
             <Link 
               href="/" 
-              className="font-serif text-xl font-medium text-[var(--text-1)] hover:text-[var(--primary)] transition-colors duration-150"
+              className="font-serif text-xs sm:text-sm lg:text-base xl:text-xl font-medium text-[var(--text-1)] hover:text-[var(--primary)] transition-colors duration-150"
             >
-              Travelogix
+              TRAVELOGIX CONSULTANCY PRIVATE LIMITED
             </Link>
 
             {/* Desktop Navigation */}

@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="md:col-span-4">
             <Link href="/" className="inline-block mb-6">
               <span className="font-serif text-xl text-[var(--text-1)]">
-                Travelogix
+                TRAVELOGIX CONSULTANCY PRIVATE LIMITED
               </span>
             </Link>
             <p className="text-sm text-[var(--text-2)] leading-relaxed max-w-xs mb-8">
@@ -139,8 +139,7 @@ export default function Footer() {
               </li>
             </ul>
             <p className="text-sm text-[var(--text-3)] mt-6 leading-relaxed">
-              123 Travel Street<br />
-              New York, NY 10001
+              OFFICE NO 3/A, 1ST FLOOR, 191/195 SHRIRAM BUILDING, DR CASWASJI HORMASJI LANE, DHOBI TALAO, KALBADEVI, MUMBAI 400002.
             </p>
           </div>
         </div>
@@ -149,7 +148,7 @@ export default function Footer() {
         <div className="border-t border-[var(--border)] mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-[var(--text-3)]">
-              © {currentYear} Travelogix. All rights reserved.
+              &copy; {currentYear} TRAVELOGIX CONSULTANCY PRIVATE LIMITED. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link 
